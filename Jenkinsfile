@@ -30,7 +30,7 @@ pipeline {
             sh "make preview"
             sh "jx preview --app $APP_NAME --dir ../.."
           }
-          dir('/home/jenkins/go/src/github.com/vfarcic/go-demo-6') {
+          dir('/home/jenkins/go/src/github.com/sguillory6/go-demo-6') {
             script {
               sleep 15
               addr=sh(script: "kubectl -n jx-$ORG-$HELM_RELEASE get ing $APP_NAME -o\
